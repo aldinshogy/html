@@ -43,7 +43,6 @@ if st.button("Generiši HTML"):
         
         # HTML preview
         st.subheader("📌 HTML Preview")
-        components.html(html, height=300, scrolling=True)
         
         # Sirovi HTML kod za kopiranje
         st.subheader("📋 Sirovi HTML kod")
