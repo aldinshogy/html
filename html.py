@@ -24,13 +24,7 @@ def text_to_html(text: str) -> str:
     paragraphs = [p.strip() for p in text.split("\n\n") if p.strip()]
     html_body = "".join(f"<p>{p.replace('\n', '<br>')}</p>" for p in paragraphs)
 
-    # Dodajemo stil za bolju vidljivost
-    styled_html = f"""
-    <div style="font-size:16px; color:#000000; line-height:1.5;">
-        {html_body}
-    </div>
-    """
-    return styled_html
+    return html_body
 
 # Streamlit UI
 st.title("📝 Pretvarač Teksta u HTML")
@@ -43,6 +37,7 @@ if st.button("Generiši HTML"):
         
         # HTML preview
         st.subheader("📌 HTML Preview")
+        components.html(html, height=300, scrolling=True)
         
         # Sirovi HTML kod za kopiranje
         st.subheader("📋 Sirovi HTML kod")
