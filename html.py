@@ -33,9 +33,7 @@ if st.button("Generiši HTML"):
     if unos.strip():
         html = text_to_html(unos)
         
-        # HTML preview
-        st.subheader("📌 HTML Preview")
-        components.html(html, height=300, scrolling=True)
+  
         
         # Sirovi HTML kod za kopiranje
         st.subheader("📋 Sirovi HTML kod")
